@@ -1,0 +1,66 @@
+<div class="jumbotron">
+
+  <div class="container">
+      <button class="btn btn-danger "> Projects  </button>
+      <h3>My Projects</h3>
+  </div>
+  <div class="bcd">
+      <button class="btn btn-info" *ngIf="createButton" (click)="FormFunction()" ng-model="true">Create New Project</button>
+      <button class="btn btn-danger" *ngIf="!createButton" (click)="FormFunction()" ng-model="true">Cancel</button>
+  </div>
+   
+<hr>
+<div class="container">
+<div class="abc">
+  <div *ngIf="!visible"><div class="formContainer">
+          <form action="#" >
+      <div class="form-group">
+        <label >Name</label>&nbsp;
+        <input type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label >Description</label>&nbsp;
+        <input type="text" class="form-control" name="myInput" ng-model="myInput" (input) ="qwerty = $event.target.value ">
+      </div>
+      <div class="form-group">
+                <label for="status">Status</label>
+        <select id="country" class="form-control" [(ngModel)]="statuss">
+              
+              <option value="Active" >Active</option>
+              <option value="Inactive">Inactive</option>
+              <option value="Critical">Critical</option>
+
+        </select>
+      </div>{{statuss}}
+
+      
+<button class="btn btn-success" type="submit" (click)="toggleCreate()">Update</button>
+<button class="btn btn-danger" type="cancel" (click)="toggleDelete()">Delete</button>
+    
+    </form>
+    </div>
+</div>
+</div>
+<div class="def">
+<div *ngIf="third" class="row">
+    
+      <div class="form-group"> 
+                <label for="status">Status</label>
+        <select id="country" class="form-control" [(ngModel)]="statuss">
+              
+              <option value="Active" id="101" onfocus="ram()">Active</option>
+              <option value="Inactive" id="102" onClick="ram();">Inactive</option>
+              <option value="Critical" id="103" onfocus="ram();">Critical</option>
+
+
+        </select>
+        <br>{{statuss}}
+        <button class="btn btn-success" type="submit" (click)="toggleUpdate()">Update</button>
+        <button class="btn btn-danger" type="cancel" (click)="toggleDelete1()">Delete</button>
+      </div>
+  
+</div>
+
+</div>
+
+</div>
